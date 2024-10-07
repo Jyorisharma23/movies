@@ -1,0 +1,179 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container */
+/* Body and Container */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('movie.png'); /* Replace 'your-image-url.jpg' with the actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed; /* Ensures the background stays fixed when scrolling */
+}
+
+/* Optional: Adjust the overlay opacity over the background */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(210, 224, 251, 0.8); /* Semi-transparent overlay */
+    z-index: -1;
+}
+
+
+/* Header */
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color:#F05A7E;
+}
+
+.header .login-btn {
+    background-color:694F8E ;
+    color: #81DAE3;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Middle Content */
+.content {
+    max-width: 800px;
+}
+
+.content .title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content .quote {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+/* Additional Text */
+.additional-text {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Email Box */
+.email-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.email-section input[type="email"] {
+    padding: 10px;
+    font-size: 18px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.email-section button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email-section button:hover {
+    background-color: #b20710;
+}
+
+/* Modal Styles for Login */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#98DED9 ;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color:#81DAE3;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+}
+
+.modal-content input {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    padding: 10px;
+    margin: 10px;
+    background-color: #E50914;
+    color: #D2E0FB;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #b20710;
+}
+
+/* Spinner */
+.spinner {
+    display: none;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #E50914;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+.spinner.show {
+    display: block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

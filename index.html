@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search - Login</title>
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+   
+    <!-- Overlay for darkening the background -->
+    <div class="overlay"></div>
+
+     <!-- Header Section -->
+    <div class="header">
+        <div class="logo">MovieSearch</div>
+        <button class="login-btn" onclick="openModal()">Login</button>
+    </div>
+
+    <!-- Middle Content Section -->
+    <div class="content">
+        <div class="title">Your Movie Search Engine</div>
+        <div class="quote" id="quote">"The only way to do great work is to love what you do." - Steve Jobs</div>
+        
+        <!-- Additional Text -->
+        <div class="additional-text">
+            Ready to watch? Enter your email to get started
+        </div>
+
+        <!-- Email Section -->
+        <div class="email-section">
+            <input type="email" id="email" placeholder="Enter your email">
+            <button onclick="getStarted()">Get Started</button>
+        </div>
+    </div>
+
+<!-- !-- Modal for    < Login/Signup --> 
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>Welcome! Please Log In or Sign Up</h2>
+            <div id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Enter email or username" required>
+                <input type="password" id="loginPassword" placeholder="Enter password" required>
+                <button onclick="signIn()">Sign In</button>
+                <button onclick="showSignUp()">Sign Up</button>
+            </div>
+            <div id="signupForm" style="display: none;">
+                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                <input type="password" id="signupPassword" placeholder="Create a password" required>
+                <button onclick="signUp()">Sign Up</button>
+            </div>
+            <button onclick="closeModal()">Close</button>
+            <div class="spinner" id="spinner"></div>
+        </div>
+    </div>
+
+    <script src="movie.js"></script>
+</body>
+</html>
